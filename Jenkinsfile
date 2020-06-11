@@ -18,7 +18,7 @@ pipeline {
       stage('Deploy'){
         steps{
           dir('ansible') {
-            ansiblePlaybook credentialsId: 'mykey', inventory: 'deployment/hosts', playbook: '/deployment/my_playbook.yaml'
+            ansiblePlaybook credentialsId: 'mykey', inventory: 'deployment/hosts', playbook: 'deployment/my_playbook.yaml'
          }
         } 
       }
