@@ -13,6 +13,7 @@ pipeline {
           echo | java -version
           echo | git --version
           '''
+         }
         }
       stage('Deploy'){
         steps{
@@ -21,6 +22,5 @@ pipeline {
          }
         } 
       }
-     }
     }   
   }
