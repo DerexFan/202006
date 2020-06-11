@@ -6,6 +6,7 @@ pipeline {
 
     stages {
       stage ('initialize') {
+        setps{
         sh '''
         git branch
         echo "path=${path}"
@@ -14,6 +15,7 @@ pipeline {
         '''
         ansiblePlaybook credentialsId: 'mykey', inventory: 'deployment/hosts', playbook: 'my_plabook.yaml'
         }
+      }
      }
         
   }
