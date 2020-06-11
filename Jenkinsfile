@@ -12,6 +12,7 @@ pipeline {
           echo "path=${path}"
           echo | java -version
           echo | git --version
+          which ansible
           '''
          }
         }
