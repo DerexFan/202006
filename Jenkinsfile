@@ -18,7 +18,7 @@ pipeline {
       stage('Deploy'){
         steps{
           dir('ansible') {
-            sh echo "show current path: "
+            echo "show current path: "
             sh pwd
             ansiblePlaybook credentialsId: 'mykey', inventory: 'deployment/hosts', playbook: 'my_plabook.yaml'
          }
