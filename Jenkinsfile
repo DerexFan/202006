@@ -6,7 +6,7 @@ pipeline {
 
     stages {
       stage ('initialize') {
-        setps{
+        steps{
         sh '''
         git branch
         echo "path=${path}"
