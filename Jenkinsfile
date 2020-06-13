@@ -19,7 +19,7 @@ pipeline {
       stage('Deploy'){
           steps{ 
              sh '''
-              ansible-playbook -u root -i ansible/deployment/hosts ansible/deployment/my_playbook.yaml --private-key=ansible/mykey
+              ansible-playbook -u root -i ansible/deployment/hosts ansible/deployment/my_playbook.yaml
               '''
         } 
       }
